@@ -40,4 +40,19 @@ public class CalculatorTests {
         // then
         Assertions.assertEquals(2, result);
     }
+
+    @DisplayName("곱하기 기능 테스트")
+    @Test
+    public void testMultiply() {
+
+        // given
+        int num1 = 5;
+        int num2 = 3;
+
+        // when
+        int result = calc.multiply(num1, num2);
+
+        // then
+        Assertions.assertEquals(15, result);
+    }
 }
