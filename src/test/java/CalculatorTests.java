@@ -25,4 +25,19 @@ public class CalculatorTests {
         // then
         Assertions.assertEquals(8, result);
     }
+
+    @DisplayName("빼기 기능 테스트")
+    @Test
+    public void testMinus() {
+
+        // given
+        int num1 = 5;
+        int num2 = 3;
+
+        // when
+        int result = calc.minus(num1, num2);
+
+        // then
+        Assertions.assertEquals(2, result);
+    }
 }

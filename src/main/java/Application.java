@@ -11,5 +11,6 @@ public class Application {
         sc.close();
 
         System.out.println("plus = " + calc.plus(num1, num2));
+        System.out.println("minus = " + calc.minus(num1, num2));
     }
 }
