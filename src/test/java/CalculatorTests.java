@@ -84,4 +84,33 @@ public class CalculatorTests {
                 () -> calc.divide(num1, num2)
         );
     }
+
+    @DisplayName("나머지 기능 테스트")
+    @Test
+    public void testModulo1() {
+
+        // given
+        int num1 = 5;
+        int num2 = 3;
+
+        // when
+        int result = calc.modulo(num1, num2);
+
+        // then
+        Assertions.assertEquals(2, result);
+    }
+    @DisplayName("나머지 기능 테스트 : 0으로 나머지 연산시 예외처리")
+    @Test
+    public void testModulo2() {
+
+        // given
+        int num1 = 5;
+        int num2 = 0;
+
+        // when & then
+        Assertions.assertThrows(
+                IllegalArgumentException.class,
+                () -> calc.modulo(num1, num2)
+        );
+    }
 }

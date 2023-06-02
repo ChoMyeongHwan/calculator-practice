@@ -14,5 +14,6 @@ public class Application {
         System.out.println("minus = " + calc.minus(num1, num2));
         System.out.println("multiply = " + calc.multiply(num1, num2));
         System.out.println("divide = " + calc.divide(num1, num2));
+        System.out.println("modulo = " + calc.modulo(num1, num2));
     }
 }
