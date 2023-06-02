@@ -55,4 +55,33 @@ public class CalculatorTests {
         // then
         Assertions.assertEquals(15, result);
     }
+
+    @DisplayName("나누기 기능 테스트")
+    @Test
+    public void testDivide1() {
+
+        // given
+        int num1 = 5;
+        int num2 = 3;
+
+        // when
+        int result = calc.divide(num1, num2);
+
+        // then
+        Assertions.assertEquals(1, result);
+    }
+    @DisplayName("나누기 기능 테스트 : 0으로 나눌 때 예외처리")
+    @Test
+    public void testDivide2() {
+
+        // given
+        int num1 = 5;
+        int num2 = 0;
+
+        // when & then
+        Assertions.assertThrows(
+                IllegalArgumentException.class,
+                () -> calc.divide(num1, num2)
+        );
+    }
 }
